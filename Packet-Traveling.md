@@ -218,4 +218,50 @@ Note:
 <em>Internet</em>: IP（v4·v6） | ICMP（v6） | IGMP | IS-IS | IPsec | BGP | RIP | OSPF | RARP <hr/>
 <em>Data Link</em>: Wi-Fi（IEEE 802.11） | ARP | WiMAX（IEEE 802.16） | ATM | DTM | 令牌环 | 以太网 | FDDI | 帧中继 | GPRS | EV-DO | HSPA | HDLC | PPP | PPPoE | L2TP | ISDN | SPB | STP <hr/>
 <em>Physical</em>: 以太网 | 调制解调器 | 电力线通信 | 同步光网络 | G.709 | 光导纤维 | 同轴电缆 | 双绞线
+---
+## Key Players
 
+* Host
+* Network
+* Switch
+* Router
+* ARP(Address Resolution Protocol)
+
+Note: 
+<em>Host</em>: PC, laptop, mobile phones, smart TVs, smart watches, certain cars, and even some refrigerators <br/>
+Client or the Server
+<hr/>
+<em>Network</em>: A Network is simply two or more connected devices<br>
+typically grouped together by <strong>similar purposes</strong> or <strong>physical location</strong>. 
+A network can take many different forms, for example: <br>
+* A group of PCs in a classroom
+* Home network
+* Public Wifi
+* Company -> multiple networks
+* Entire Internet
+<hr/>
+<em>Switch</em>: Inside Network, Layer 2, MAC Address table, ports, floods the frame out each switch port <br>
+<a href="https://www.practicalnetworking.net/wp-content/uploads/2016/01/packtrav-switch-l2-1024x174.png" target="_blank">查看图片</a>
+<hr/>
+<em>Router</em>: Between networks, Layer 3, Routing Table(AKA Routes), multiple ways to fill Routing Table<br />
+<a href="https://www.practicalnetworking.net/wp-content/uploads/2016/01/packtrav-router-l3-1024x213.png" target="_blank">查看图片</a>
+<hr/>
+<em>ARP</em>: Layer 2 - MAC Address, Layer 3 - IP Address, bridges these two addressing schemes.<br/>
+当两台终端需要通信时，他们必须知道彼此的IP地址（人工/DNS 无所谓），但是他们并不知道彼此的Mac地址。<br>
+ARP Table: a mapping of IP addresses to correlating MAC addresses。Owned by L3<br>
+<a href="https://www.practicalnetworking.net/wp-content/uploads/2016/01/packtrav-arp-l2-l3-1024x256.png" target="_blank">查看图片</a>
+
+<hr/>
+---
+## Host to Host Communication
+
+---
+## Host to Host through a Switch
+
+---
+## Host to Host through a Router
+
+---
+## Summary
+
+---
