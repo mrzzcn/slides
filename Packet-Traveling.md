@@ -29,6 +29,9 @@ JANUARY 28, 2016 Ed Harmoush
 
 <!-- .slide: data-auto-animate -->
 <style>
+  img {
+    background-color: #fff !important;
+  }
   .box {
     display: flex;
     flex-direction: row;
@@ -250,18 +253,165 @@ A network can take many different forms, for example: <br>
 当两台终端需要通信时，他们必须知道彼此的IP地址（人工/DNS 无所谓），但是他们并不知道彼此的Mac地址。<br>
 ARP Table: a mapping of IP addresses to correlating MAC addresses。Owned by L3<br>
 <a href="https://www.practicalnetworking.net/wp-content/uploads/2016/01/packtrav-arp-l2-l3-1024x256.png" target="_blank">查看图片</a>
-
 <hr/>
 ---
+<!-- .slide: data-auto-animate -->
+## Host to Host Communication
+<img data-id="host-to-host" src="https://www.practicalnetworking.net/wp-content/uploads/2016/01/packtrav-hth-1-1024x129.png" />
+
+---
+
+<!-- .slide: data-auto-animate -->
 ## Host to Host Communication
 
+<img data-id="host-to-host" src="https://www.practicalnetworking.net/wp-content/uploads/2016/01/packtrav-hth-2-1024x135.png" />
+
 ---
+
+<!-- .slide: data-auto-animate -->
+## Host to Host Communication
+
+<img data-id="host-to-host" src="https://www.practicalnetworking.net/wp-content/uploads/2016/01/packtrav-hth-3-1024x133.png" />
+
+---
+
+<!-- .slide: data-auto-animate -->
+## Host to Host Communication
+
+<img data-id="host-to-host" src="https://www.practicalnetworking.net/wp-content/uploads/2016/01/packtrav-hth-4-1024x129.png" />
+
+---
+
+<!-- .slide: data-auto-animate -->
 ## Host to Host through a Switch
 
+<img data-id="host-to-host-switch" src="https://www.practicalnetworking.net/wp-content/uploads/2016/01/packtrav-host-switch-host.gif" />
+
+Note:
+<em>Switch</em>: Learning, Flooding, Forwarding, and Filtering. <br/>
+Learning: fill MAC address table <br>
+Flooding: unknown location, duplicate frame and send to all ports. (AKA Flooding) <br>
+Forwarding: Store and Forward | Cut-Through | Fragment Free<br>
+Filtering: never forward a frame back out the same port. Most commonly happens during flooding<br>
+<hr>
+
 ---
+
+<!-- .slide: data-auto-animate -->
+## Host to Host through a Switch
+
+1. Host A -> Host B
+2. Record&lt;Port 1 = aaaa&gt;
+3. Flood bbbb
+4. Host C => discard
+5. Host B => response
+6. Switch Record&lt;Port 2 = bbbb&gt;
+7. Forward => Port 2(bbbb)
+
+Note: 
+<em>Broadcast VS Flooding</em>
+
+---
+
+<!-- .slide: data-auto-animate -->
+
 ## Host to Host through a Router
 
----
-## Summary
+<img data-id="host-to-host-router" src="https://www.practicalnetworking.net/wp-content/uploads/2016/01/packtrav-hhr-initial-1024x212.png" />
+
+Note:
+<em>main role</em> to forward packets from one network to the next <br>
+<em>2 functions:</em>
+* populate and maintain a Routing Table(the map of all networks in existence).
+* populate and maintain an ARP Table(mapping of IP address to MAC addresses)
+<hr/>
 
 ---
+
+<!-- .slide: data-auto-animate -->
+
+## Host to Host through a Router
+
+<img data-id="host-to-host-router" src="https://www.practicalnetworking.net/wp-content/uploads/2016/01/packtrav-hhr-routing-table-300x130.png" />
+
+Note:
+* populate and maintain a Routing Table(the map of all networks in existence).
+  * Directly Connected route: 直连.
+  * Static Route: manually configured by an administrator.
+  * Dynamic Routing: another series.
+  * ...
+
+---
+
+<!-- .slide: data-auto-animate -->
+
+## Host to Host through a Router
+
+<img data-id="host-to-host-router" src="https://www.practicalnetworking.net/wp-content/uploads/2016/01/packtrav-hhr-arp-table-300x149.png" />
+
+Note:
+* populate and maintain an ARP Table(mapping of IP address to MAC addresses) 
+  * ARP Table is populated ‘as needed’
+<hr>
+
+---
+
+<!-- .slide: data-auto-animate -->
+
+## Host A -> R1
+
+<img data-id="host-to-host-router" src="https://www.practicalnetworking.net/wp-content/uploads/2016/01/packtrav-hhr-route-first-hop-300x240.png" />
+
+Note:
+* Routing Table -> two type of routes:
+  * some that point to an Interface, 
+  * some that point to a Next-Hop IP address. 
+
+我们讨论两种情况：<br>
+Host A -> Host B <br>
+Host A -> Host C <br>
+两种情况的第一步都是 Houst A -> R1
+<hr>
+
+---
+
+<!-- .slide: data-auto-animate -->
+
+## R1 -> Interface
+
+<img data-id="host-to-host-router" src="https://www.practicalnetworking.net/wp-content/uploads/2016/01/packtrav-hhr-route-interface-1024x214.png" />
+
+Note:
+
+<hr>
+
+---
+
+<!-- .slide: data-auto-animate -->
+
+## R1 -> Next-Hop address
+
+<img data-id="host-to-host-router" src="https://www.practicalnetworking.net/wp-content/uploads/2016/01/packtrav-hhr-route-nexthop1-1024x212.png" />
+
+Note:
+
+<hr>
+
+---
+
+## Summary
+
+* OSI Model
+* Key Players
+  * Host
+  * Network
+  * Switch
+  * Router
+  * ARP
+* Host to Host Communication
+* Host to Host through a Switch
+* Host to Host through a Router
+
+---
+
+<iframe width="1120" height="730" src="https://www.youtube.com/embed/rYodcvhh7b8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
