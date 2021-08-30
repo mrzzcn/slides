@@ -227,7 +227,7 @@ Note:
 * Router
 * ARP(Address Resolution Protocol)
 
-Note: 
+Note:
 <em>Host</em>: PC, laptop, mobile phones, smart TVs, smart watches, certain cars, and even some refrigerators <br/>
 Client or the Server
 <hr/>
