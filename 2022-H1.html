@@ -1,0 +1,293 @@
+<html>
+
+<head>
+  <link href="https://cdn.bootcdn.net/ajax/libs/reveal.js/4.3.1/reveal.css" rel="stylesheet">
+  <script type="text/javascript" charset="utf-8">
+    try {
+      if (window.location.href.indexOf('theme=') >= 0) {
+        document.writeln(`<link href="https://cdn.bootcdn.net/ajax/libs/reveal.js/4.3.1/theme/${window.location.href.split('theme=')[1]}.css" rel="stylesheet">`)
+      } else {
+        document.writeln(`<link href="https://cdn.bootcdn.net/ajax/libs/reveal.js/4.3.1/theme/white.css" rel="stylesheet">`)
+      }
+    } catch {
+      document.writeln(`<link href="https://cdn.bootcdn.net/ajax/libs/reveal.js/4.3.1/theme/white.css" rel="stylesheet">`)
+    }
+  </script>
+  <style type="text/css" media="screen">
+    table {
+      font-size: 24px;
+    }
+
+    table td,
+    table th {
+      color: var(--r-heading-color);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section data-markdown>
+        <textarea data-template>
+          ### 技术中心 2022 年 H1 述职汇报
+
+          > 爱回收用户平台研发部 - 张振
+         </textarea>
+      </section>
+      <section>
+        <table>
+          <caption>
+            <h2>上半年业务需求</h2>
+            <br>
+            <br>
+          </caption>
+          <thead>
+            <tr>
+              <th>
+                核心业务流程
+              </th>
+              <th>
+                重点需求
+              </th>
+              <th>
+                隐私 &amp; 安全
+              </th>
+              <th>
+                其他
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="" rowspan="" headers="">
+                奢侈品 1 期、2 期、3 期
+              </td>
+              <td colspan="" rowspan="" headers="">
+                Jupiter 上线头条小程序
+              </td>
+              <td colspan="" rowspan="" headers="">
+                用户隐私信息(经纬度、搜索关键词等)不上传服务器
+              </td>
+              <td colspan="" rowspan="" headers="">
+                小黄人 H5 质检工具
+              </td>
+            </tr>
+            <tr>
+              <td colspan="" rowspan="" headers="">
+                安心卖 2 期
+              </td>
+              <td colspan="" rowspan="" headers="">
+                阿凡达文本组件
+              </td>
+              <td colspan="" rowspan="" headers="">
+                个人信息双清单
+              </td>
+              <td colspan="" rowspan="" headers="">
+                [重构]我的机器
+              </td>
+            </tr>
+            <tr>
+              <td colspan="" rowspan="" headers="">
+                多品类
+              </td>
+              <td colspan="" rowspan="" headers="">
+                小黄人 H5 质检工具
+              </td>
+              <td colspan="" rowspan="" headers="">
+                浏览模式:<br />
+                不同意隐私政策/用户协议时 可以使用浏览模式
+              </td>
+              <td colspan="" rowspan="" headers="">
+                [优化]报价页会员模块
+              </td>
+            </tr>
+            <tr>
+              <td colspan="" rowspan="" headers="">
+                主力门店对接爱分类
+              </td>
+              <td colspan="" rowspan="" headers="">
+              </td>
+              <td colspan="" rowspan="" headers="">
+                敏感接口增强签名规则
+              </td>
+              <td colspan="" rowspan="" headers="">
+                [活动]会员增加限时回收权益
+              </td>
+            </tr>
+            <tr>
+              <td colspan="" rowspan="" headers="">
+                询价互斥项交互统一及优化
+              </td>
+              <td colspan="" rowspan="" headers="">
+              </td>
+              <td colspan="" rowspan="" headers="">
+              </td>
+              <td colspan="" rowspan="" headers="">
+                [活动]春节不打烊抽奖活动
+              </td>
+            </tr>
+            <tr>
+              <td colspan="" rowspan="" headers="">
+                优化钱包页面展示及提现流程
+              </td>
+              <td colspan="" rowspan="" headers="">
+              </td>
+              <td colspan="" rowspan="" headers="">
+              </td>
+              <td colspan="" rowspan="" headers="">
+                [活动]邀新活动改版
+              </td>
+            </tr>
+            <tr>
+              <td colspan="" rowspan="" headers="">
+                帮助中心改版
+              </td>
+              <td colspan="" rowspan="" headers="">
+              </td>
+              <td colspan="" rowspan="" headers="">
+              </td>
+              <td colspan="" rowspan="" headers="">
+                [广告]Android 、小程序、H5 平台营销推广对接
+              </td>
+            </tr>
+            <tr>
+              <td colspan="" rowspan="" headers="">
+                意见反馈页面重构
+              </td>
+              <td colspan="" rowspan="" headers="">
+              </td>
+              <td colspan="" rowspan="" headers="">
+              </td>
+              <td colspan="" rowspan="" headers="">
+                [广告]奢侈品投放页面
+              </td>
+            </tr>
+            <tr>
+              <td colspan="" rowspan="" headers="">
+                回收方式排序逻辑优化
+              </td>
+              <td colspan="" rowspan="" headers="">
+              </td>
+              <td colspan="" rowspan="" headers="">
+              </td>
+              <td colspan="" rowspan="" headers="">
+              </td>
+            </tr>
+            <tr>
+              <td colspan="" rowspan="" headers="">
+                ...
+              </td>
+              <td colspan="" rowspan="" headers="">
+              </td>
+              <td colspan="" rowspan="" headers="">
+              </td>
+              <td colspan="" rowspan="" headers="">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <section data-markdown>
+          <textarea data-template>
+          ## 官网前端研发架构
+         </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+          ### 已经完成的项目的整理、重构工作：
+
+          ### 1. 下线 .net 接口
+          - portal-user
+          - portal-api
+          - portal-sos
+          - portal-wx
+         </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+          ### 已经完成的项目的整理、重构工作：
+
+          ### 2. 废弃过期项目
+          1. Huishou.Web.Mobile ( 合并 neom )
+          2. vue 版官网 ( 合并 neom )
+          3. vue 版活动页 m-ahs-activity (合并 neom )
+          4. sos ( avatar )
+          5. mpvue 微信小程序 earth ( Jupiter )
+          6. mpvue 头条小程序 saturn ( Jupiter )
+          7. weixin.aihuishou.com (下线)
+         </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+          ### 已经完成的项目的整理、重构工作：
+
+          ### 3. 其他
+          - 统一项目脚手架
+            - react-scripts-ahs
+          - TS 重构
+          - 移除前端反向代理、为迁云做好准备
+            - dubai-gateway
+            - erp-gateway(部分完成)
+         </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+          ## 官网前端研发架构
+
+          ### 上半年技术目标
+          - 整理团队内部最佳实践、编码规范
+          - 代码格式校验规则集
+          - <i style="opacity: 0.4;">Jenkins 优化</i>
+         </textarea>
+        </section>
+      </section>
+      <section data-markdown>
+        <textarea data-template>
+          ## 主要成果
+
+          - ### 重点业务需求稳定推进上线
+            - 阿凡达文本组件
+          - ### 输出基于 React 框架的前端项目编码规范
+          - ### 代码风格：`eslint-config-ahs`
+         </textarea>
+      </section>
+      <section data-markdown>
+        <textarea data-template>
+          ## 复盘反思
+
+          - ### 外部协作效率尚有提升空间
+            - 奢侈品、爱分类对接
+          - ### 团队计划与公司整体策略契合
+            - 前端项目规范、工具链优化
+         </textarea>
+      </section>
+      <section data-markdown>
+        <textarea data-template>
+          ## 下阶段工作计划
+
+          - ### 确保重点业务需求按期稳定上线，保障业务支持
+          - ### 对接部门统一的前端工具链、最佳实践、代码风格
+         </textarea>
+      </section>
+      <section data-markdown>
+        <textarea data-template>
+          # Q &amp; A
+         </textarea>
+      </section>
+    </div>
+  </div>
+  <script src="https://cdn.bootcdn.net/ajax/libs/reveal.js/4.3.1/reveal.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/reveal.js/4.3.1/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/reveal.js/4.3.1/plugin/markdown/markdown.js"></script>
+  <script>
+    Reveal.initialize({
+      plugins: [RevealMarkdown],
+      width: window.screen.width * 0.9,
+      height: 700,
+    });
+  </script>
+</body>
+
+</html>
