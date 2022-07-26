@@ -2,6 +2,7 @@
 
 <head>
   <link href="https://cdn.bootcdn.net/ajax/libs/reveal.js/4.3.1/reveal.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/lxgwwenkai-web@0.1.2/lxgwwenkai.css" rel="stylesheet"/>
   <script type="text/javascript" charset="utf-8">
     try {
       if (window.location.href.indexOf('theme=') >= 0) {
@@ -14,6 +15,10 @@
     }
   </script>
   <style type="text/css" media="screen">
+    :root {
+      --r-heading-font: "LXGWWenKai","Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+      --r-main-font: "LXGWWenKai","Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+    }
     table {
       font-size: 24px;
     }
@@ -21,6 +26,33 @@
     table td,
     table th {
       color: var(--r-heading-color);
+    }
+
+    li:not(:last-child) {
+      margin-bottom: .4em;
+    }
+
+    .ul-h2 {
+      font-size: var(--r-heading2-size);
+      font-weight: bold;
+    }
+
+    .ul-h2 li:not(last-child) {
+      margin-bottom: 1em;
+    }
+
+    em {
+      font-weight: bolder;
+      font-style: normal !important;
+    }
+
+    strong {
+      font-size: 1.2em;
+      color: #ffe02d;
+    }
+
+    .notes {
+      opacity: .7;
     }
   </style>
 </head>
@@ -36,162 +68,186 @@
          </textarea>
       </section>
       <section>
-        <table>
-          <caption>
-            <h2>上半年业务需求</h2>
-            <br>
-            <br>
-          </caption>
-          <thead>
-            <tr>
-              <th>
-                核心业务流程
-              </th>
-              <th>
-                重点需求
-              </th>
-              <th>
-                隐私 &amp; 安全
-              </th>
-              <th>
-                其他
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td colspan="" rowspan="" headers="">
-                奢侈品 1 期、2 期、3 期
-              </td>
-              <td colspan="" rowspan="" headers="">
-                Jupiter 上线头条小程序
-              </td>
-              <td colspan="" rowspan="" headers="">
-                用户隐私信息(经纬度、搜索关键词等)不上传服务器
-              </td>
-              <td colspan="" rowspan="" headers="">
-                小黄人 H5 质检工具
-              </td>
-            </tr>
-            <tr>
-              <td colspan="" rowspan="" headers="">
-                安心卖 2 期
-              </td>
-              <td colspan="" rowspan="" headers="">
-                阿凡达文本组件
-              </td>
-              <td colspan="" rowspan="" headers="">
-                个人信息双清单
-              </td>
-              <td colspan="" rowspan="" headers="">
-                [重构]我的机器
-              </td>
-            </tr>
-            <tr>
-              <td colspan="" rowspan="" headers="">
-                多品类
-              </td>
-              <td colspan="" rowspan="" headers="">
-                小黄人 H5 质检工具
-              </td>
-              <td colspan="" rowspan="" headers="">
-                浏览模式:<br />
-                不同意隐私政策/用户协议时 可以使用浏览模式
-              </td>
-              <td colspan="" rowspan="" headers="">
-                [优化]报价页会员模块
-              </td>
-            </tr>
-            <tr>
-              <td colspan="" rowspan="" headers="">
-                主力门店对接爱分类
-              </td>
-              <td colspan="" rowspan="" headers="">
-              </td>
-              <td colspan="" rowspan="" headers="">
-                敏感接口增强签名规则
-              </td>
-              <td colspan="" rowspan="" headers="">
-                [活动]会员增加限时回收权益
-              </td>
-            </tr>
-            <tr>
-              <td colspan="" rowspan="" headers="">
-                询价互斥项交互统一及优化
-              </td>
-              <td colspan="" rowspan="" headers="">
-              </td>
-              <td colspan="" rowspan="" headers="">
-              </td>
-              <td colspan="" rowspan="" headers="">
-                [活动]春节不打烊抽奖活动
-              </td>
-            </tr>
-            <tr>
-              <td colspan="" rowspan="" headers="">
-                优化钱包页面展示及提现流程
-              </td>
-              <td colspan="" rowspan="" headers="">
-              </td>
-              <td colspan="" rowspan="" headers="">
-              </td>
-              <td colspan="" rowspan="" headers="">
-                [活动]邀新活动改版
-              </td>
-            </tr>
-            <tr>
-              <td colspan="" rowspan="" headers="">
-                帮助中心改版
-              </td>
-              <td colspan="" rowspan="" headers="">
-              </td>
-              <td colspan="" rowspan="" headers="">
-              </td>
-              <td colspan="" rowspan="" headers="">
-                [广告]Android 、小程序、H5 平台营销推广对接
-              </td>
-            </tr>
-            <tr>
-              <td colspan="" rowspan="" headers="">
-                意见反馈页面重构
-              </td>
-              <td colspan="" rowspan="" headers="">
-              </td>
-              <td colspan="" rowspan="" headers="">
-              </td>
-              <td colspan="" rowspan="" headers="">
-                [广告]奢侈品投放页面
-              </td>
-            </tr>
-            <tr>
-              <td colspan="" rowspan="" headers="">
-                回收方式排序逻辑优化
-              </td>
-              <td colspan="" rowspan="" headers="">
-              </td>
-              <td colspan="" rowspan="" headers="">
-              </td>
-              <td colspan="" rowspan="" headers="">
-              </td>
-            </tr>
-            <tr>
-              <td colspan="" rowspan="" headers="">
-                ...
-              </td>
-              <td colspan="" rowspan="" headers="">
-              </td>
-              <td colspan="" rowspan="" headers="">
-              </td>
-              <td colspan="" rowspan="" headers="">
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <section>
+          <table>
+            <caption style="margin-bottom: 1em;">
+              <h2>上半年业务需求</h2>
+            </caption>
+            <thead>
+              <tr>
+                <th>
+                  <em>重点需求</em>
+                </th>
+                <th>
+                  其他
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="fullheight">
+                    <ul class="ul-h2">
+                      <li>
+                        隐私 &amp; 安全
+                      </li>
+                      <li>
+                        奢侈品 1 期、2 期、3 期
+                      </li>
+                      <li>
+                        Jupiter 上线头条小程序
+                      </li>
+                      <li>
+                        阿凡达文本组件、抽奖活动
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+                <td>
+                  <ul>
+                    <li>
+                      安心卖 2 期
+                    </li>
+                    <li>
+                      多品类
+                    </li>
+                    <li>
+                      主力门店对接爱分类
+                    </li>
+                    <li>
+                      [优化]钱包页面展示及提现流程
+                    </li>
+                    <li>
+                      [优化]帮助中心
+                    </li>
+                    <li>
+                      [优化]意见反馈
+                    </li>
+                    <li>
+                      [优化]报价页会员模块
+                    </li>
+                    <li>
+                      [重构]我的机器
+                    </li>
+                    <li>
+                      [活动]会员增加限时回收权益
+                    </li>
+                    <li>
+                      [活动]邀新活动改版
+                    </li>
+                    <li>
+                      [活动]春节不打烊抽奖活动
+                    </li>
+                    <li>
+                      回收方式排序逻辑优化
+                    </li>
+                    <li>
+                      [广告]Android 、小程序、H5 平台营销推广对接
+                    </li>
+                    <li>
+                      [广告]奢侈品投放页面
+                    </li>
+                    <li>
+                      [小黄人]苹果设备 H5 质检工具
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## 隐私 &amp; 安全
+
+            - 背景
+            - 措施
+              - 用户隐私信息(经纬度、搜索历史、设备信息)不上传服务器
+              - 个人信息双清单
+              - 浏览模式：不同意隐私政策/用户协议时 可以使用浏览模式
+              - 敏感接口增强签名规则
+
+            Note:
+
+          </textarea>
+        </section>
+        <section data-auto-animate data-auto-animate-id="luxury" data-markdown>
+          <textarea data-template>
+            ## 奢侈品 1 期、2 期、3 期
+
+            - 重要
+            - 紧急
+            - 还要快速变化
+
+            Note:
+
+          </textarea>
+        </section>
+        <section data-auto-animate data-auto-animate-id="luxury" data-markdown>
+          <textarea data-template>
+            ## 奢侈品 1 期、2 期、3 期
+
+            - 重要
+            - 紧急
+            - 还要快速变化
+            - 如何既要又要？
+
+            Note:
+
+          </textarea>
+        </section>
+        <section data-auto-animate data-auto-animate-id="luxury" data-markdown>
+          <textarea data-template>
+            ## 奢侈品 1 期、2 期、3 期
+
+            - 重要
+            - 紧急
+            - 还要快速变化
+            - 如何既要又要？
+              - 基于 RN 的自研 AMP 开发框架，一次开发适配 iOS Android H5 三端
+              - 服务端托管 Bundle 版本，实现**生产环境**热更新
+
+            Note:
+
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Jupiter 上线头条小程序
+
+            <br/>
+            <img src="http://sr.aihuishou.com/c2b/zy-fe/public/jack/slides-jupiter.png" style="width: 800px;" />
+
+            Note:
+
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## 阿凡达文本组件、抽奖活动
+
+            - 6・18 期间有 <strong>15</strong> 个活动规则页面要快速上线并支持<strong>灵活修改</strong>
+            <br />
+
+            - 参与抽奖活动用户<span class="notes">(对比未参与抽奖用户)</span>
+            - 【  3C 】访问->提交 提升 <strong>33.3%</strong>
+            - 【奢侈品】访问->提交 提升 <strong>635.9%</strong>
+
+
+            Note:
+
+          </textarea>
+        </section>
+      </section>
       </section>
       <section>
         <section data-markdown>
           <textarea data-template>
-          ## 官网前端研发架构
+          ## 前端编码规范
          </textarea>
         </section>
         <section data-markdown>
@@ -212,8 +268,8 @@
           ### 2. 废弃过期项目
           1. Huishou.Web.Mobile ( 合并 neom )
           2. vue 版官网 ( 合并 neom )
-          3. vue 版活动页 m-ahs-activity (合并 neom )
-          4. sos ( avatar )
+          3. vue 版活动页 m-ahs-activity ( 合并 neom )
+          4. sos ( 阿凡达 )
           5. mpvue 微信小程序 earth ( Jupiter )
           6. mpvue 头条小程序 saturn ( Jupiter )
           7. weixin.aihuishou.com (下线)
@@ -221,25 +277,25 @@
         </section>
         <section data-markdown>
           <textarea data-template>
-          ### 已经完成的项目的整理、重构工作：
+            ### 已经完成的项目的整理、重构工作：
 
-          ### 3. 其他
-          - 统一项目脚手架
-            - react-scripts-ahs
-          - TS 重构
-          - 移除前端反向代理、为迁云做好准备
-            - dubai-gateway
-            - erp-gateway(部分完成)
+            ### 3. 其他
+            - 统一项目脚手架
+              - react-scripts-ahs
+            - 统一前端发布流程与工具(Jenkins)
+            - 搭建 NPM 私仓 (nexus)
+            - TS 重构
+            - 移除前端反向代理、为迁云做好准备
+              - dubai-gateway
+              - erp-gateway(部分完成)
          </textarea>
         </section>
         <section data-markdown>
           <textarea data-template>
-          ## 官网前端研发架构
+          ## 上半年技术目标：前端编码规范
 
-          ### 上半年技术目标
-          - 整理团队内部最佳实践、编码规范
+          - 整理团队内部编码规范、最佳实践
           - 代码格式校验规则集
-          - <i style="opacity: 0.4;">Jenkins 优化</i>
          </textarea>
         </section>
       </section>
@@ -248,9 +304,24 @@
           ## 主要成果
 
           - ### 重点业务需求稳定推进上线
-            - 阿凡达文本组件
-          - ### 输出基于 React 框架的前端项目编码规范
-          - ### 代码风格：`eslint-config-ahs`
+          - ### 前端编码规范
+            - 基于 React 框架的前端编码规范文档
+            - eslint-config-ahs
+          - ### 抽象业务逻辑 提升代码复用性 从而提升代码质量
+            - 询价
+            - 阿凡达 H5 渲染组件
+          - ### 身份转变
+
+          Note:
+          官网前端涉及五个端（iOS Android 微信小程序 头条小程序 原生H5），
+          5 个技术栈（Android iOS RN 小程序 H5），
+          同一个功能模块可能需要不同端分别实现 或者某一个功能需要在多个场景使用。
+          比如 3C 询价逻辑，同时出现在旧机和换新流程中，旧机是原生页面，换新是 RN 实现的，我们把询价功能中与UI无关的部分抽象成为一个独立的 npm 包，给小程序/H5/RN 复用，实现关注点分离，把询价流程封装在包内部，各端关注接口请求和UI交互部分。
+
+          我们在实践过程中发现各端在实现相同的功能时，对边界情况的处理方案通常会有一些小小的不一致；
+          还有一些需求需要各端实现一部分流程，然后整合起来形成一套完整的流程，比如换新和奢侈品（SPU列表页面的交互非常精细，需要在原生APP实现）。
+          从需求评审、到移交、开发、联调 再到提测 需要有人协调整个需求生命周期中各端的想法、同步边界情况的处理方案，沟通一些交互的实现细节（比如轮询间隔；动画的模式、时间），对接跨端流程的跳转参数等问题 来确保每个需求点都按产品和设计师的期望推进。
+          在过去的半年里，我逐渐承担了官网前端项目的这个角色。
          </textarea>
       </section>
       <section data-markdown>
@@ -268,7 +339,9 @@
           ## 下阶段工作计划
 
           - ### 确保重点业务需求按期稳定上线，保障业务支持
-          - ### 对接部门统一的前端工具链、最佳实践、代码风格
+          - ### C 端 UI 与 交互质量进一步提升
+          - ### 整合技术中心统一的前端工具链、最佳实践、代码风格
+          - ###
          </textarea>
       </section>
       <section data-markdown>
@@ -279,13 +352,17 @@
     </div>
   </div>
   <script src="https://cdn.bootcdn.net/ajax/libs/reveal.js/4.3.1/reveal.js"></script>
-  <script src="https://cdn.bootcdn.net/ajax/libs/reveal.js/4.3.1/plugin/highlight/highlight.js"></script>
-  <script src="https://cdn.bootcdn.net/ajax/libs/reveal.js/4.3.1/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/reveal.js/4.3.1/plugin/highlight/highlight.js">
+  </script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/reveal.js/4.3.1/plugin/markdown/markdown.js">
+  </script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/reveal.js/4.3.1/plugin/notes/notes.js"></script>
   <script>
     Reveal.initialize({
-      plugins: [RevealMarkdown],
+      plugins: [RevealMarkdown, RevealNotes],
       width: window.screen.width * 0.9,
       height: 700,
+      showNotes: window.location.href.indexOf('_notes') > 0
     });
   </script>
 </body>
