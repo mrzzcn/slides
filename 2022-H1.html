@@ -2,7 +2,7 @@
 
 <head>
   <link href="https://cdn.bootcdn.net/ajax/libs/reveal.js/4.3.1/reveal.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/lxgwwenkai-web@0.1.2/lxgwwenkai.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/lxgwwenkai-web@0.1.2/lxgwwenkai.css" rel="stylesheet" />
   <script type="text/javascript" charset="utf-8">
     try {
       if (window.location.href.indexOf('theme=') >= 0) {
@@ -16,9 +16,10 @@
   </script>
   <style type="text/css" media="screen">
     :root {
-      --r-heading-font: "LXGWWenKai","Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
-      --r-main-font: "LXGWWenKai","Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+      --r-heading-font: "LXGWWenKai", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+      --r-main-font: "LXGWWenKai", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     }
+
     table {
       font-size: 24px;
     }
@@ -53,6 +54,7 @@
 
     .notes {
       opacity: .7;
+      font-size: .8em;
     }
   </style>
 </head>
@@ -98,7 +100,7 @@
                         Jupiter 上线头条小程序
                       </li>
                       <li>
-                        阿凡达文本组件、抽奖活动
+                        阿凡达抽奖活动、富文本组件
                       </li>
                     </ul>
                   </div>
@@ -113,6 +115,9 @@
                     </li>
                     <li>
                       主力门店对接爱分类
+                    </li>
+                    <li>
+                      会员续费
                     </li>
                     <li>
                       [优化]钱包页面展示及提现流程
@@ -228,16 +233,16 @@
         </section>
         <section data-markdown>
           <textarea data-template>
-            ## 阿凡达文本组件、抽奖活动
+            ## 阿凡达抽奖活动、富文本组件
 
-            - 6・18 期间有 <strong>15</strong> 个活动规则页面要快速上线并支持<strong>灵活修改</strong>
-            <br />
+            > <strong>[活动]春节不打烊抽奖活动</strong>
 
             - 参与抽奖活动用户<span class="notes">(对比未参与抽奖用户)</span>
-            - 【  3C 】访问->提交 提升 <strong>33.3%</strong>
-            - 【奢侈品】访问->提交 提升 <strong>635.9%</strong>
-
-
+              - 【  3C 】访问->提交 提升 <strong>33.3%</strong>
+              - 【奢侈品】访问->提交 提升 <strong>635.9%</strong>
+            <br />
+            <br />
+            - 6・18 期间有 <strong>15</strong> 个活动规则页面要快速上线并支持<strong>灵活修改</strong>
             Note:
 
           </textarea>
@@ -252,7 +257,7 @@
         </section>
         <section data-markdown>
           <textarea data-template>
-          ### 已经完成的项目的整理、重构工作：
+          ### 已完成的整理、重构：
 
           ### 1. 下线 .net 接口
           - portal-user
@@ -263,7 +268,7 @@
         </section>
         <section data-markdown>
           <textarea data-template>
-          ### 已经完成的项目的整理、重构工作：
+          ### 已完成的整理、重构：
 
           ### 2. 废弃过期项目
           1. Huishou.Web.Mobile ( 合并 neom )
@@ -277,7 +282,7 @@
         </section>
         <section data-markdown>
           <textarea data-template>
-            ### 已经完成的项目的整理、重构工作：
+            ### 已完成的整理、重构：
 
             ### 3. 其他
             - 统一项目脚手架
@@ -307,45 +312,49 @@
           - ### 前端编码规范
             - 基于 React 框架的前端编码规范文档
             - eslint-config-ahs
-          - ### 抽象业务逻辑 提升代码复用性 从而提升代码质量
+          - ### 抽象业务逻辑 提升复用性、代码质量
             - 询价
-            - 阿凡达 H5 渲染组件
-          - ### 身份转变
+            - 阿凡达富文本组件 H5 渲染器
+          - ### 身份转变<span class="notes">(角色增加)</span>
 
           Note:
+          第三是 抽象业务逻辑：
           官网前端涉及五个端（iOS Android 微信小程序 头条小程序 原生H5），
           5 个技术栈（Android iOS RN 小程序 H5），
           同一个功能模块可能需要不同端分别实现 或者某一个功能需要在多个场景使用。
           比如 3C 询价逻辑，同时出现在旧机和换新流程中，旧机是原生页面，换新是 RN 实现的，我们把询价功能中与UI无关的部分抽象成为一个独立的 npm 包，给小程序/H5/RN 复用，实现关注点分离，把询价流程封装在包内部，各端关注接口请求和UI交互部分。
 
-          我们在实践过程中发现各端在实现相同的功能时，对边界情况的处理方案通常会有一些小小的不一致；
+          最后是身份的转换
+          我们在实践过程中发现各端在实现相同的功能时，对边界情况等细节的处理方式通常会有一些小小的不一致；
           还有一些需求需要各端实现一部分流程，然后整合起来形成一套完整的流程，比如换新和奢侈品（SPU列表页面的交互非常精细，需要在原生APP实现）。
-          从需求评审、到移交、开发、联调 再到提测 需要有人协调整个需求生命周期中各端的想法、同步边界情况的处理方案，沟通一些交互的实现细节（比如轮询间隔；动画的模式、时间），对接跨端流程的跳转参数等问题 来确保每个需求点都按产品和设计师的期望推进。
+          一个需求，从需求评审、移交、开发、联调 再到提测 需要有人协调整个需求生命周期中各端的想法、同步边界情况的处理方案，沟通一些交互的实现细节（比如轮询间隔；动画的模式、时间），对接跨端流程的跳转参数等问题 来确保每个需求点都按产品和设计师的期望推进。
           在过去的半年里，我逐渐承担了官网前端项目的这个角色。
          </textarea>
       </section>
       <section data-markdown>
         <textarea data-template>
           ## 复盘反思
+          - ### C 端 UI 与 交互质量进一步提升
 
-          - ### 外部协作效率尚有提升空间
-            - 奢侈品、爱分类对接
-          - ### 团队计划与公司整体策略契合
-            - 前端项目规范、工具链优化
+          - #### 团队计划与公司整体策略契合
+            - 前端编码范
+          - #### 优化跨公司级别需求的推进方法
+            - 奢侈品、爱分类
          </textarea>
       </section>
       <section data-markdown>
         <textarea data-template>
           ## 下阶段工作计划
 
-          - ### 确保重点业务需求按期稳定上线，保障业务支持
-          - ### C 端 UI 与 交互质量进一步提升
-          - ### 整合技术中心统一的前端工具链、最佳实践、代码风格
-          - ###
+          - ### 保障业务支持：确保重点业务需求如期稳定上线
+          - ### 精细化打磨 C 端 UI、交互细节
+          - ### 整合技术中心 前端工具链、编码规范、最佳实践
          </textarea>
       </section>
       <section data-markdown>
         <textarea data-template>
+          ### Thank you for listening.
+
           # Q &amp; A
          </textarea>
       </section>
