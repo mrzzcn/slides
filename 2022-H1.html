@@ -1,8 +1,9 @@
 <html>
 
 <head>
+  <meta charset="utf-8">
   <link href="https://cdn.bootcdn.net/ajax/libs/reveal.js/4.3.1/reveal.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/lxgwwenkai-web@0.1.2/lxgwwenkai.css" rel="stylesheet" />
+  <link href="https://unpkg.com/lxgwwenkai-web@0.1.2/lxgwwenkai.css" rel="stylesheet" />
   <script type="text/javascript" charset="utf-8">
     try {
       if (window.location.href.indexOf('theme=') >= 0) {
@@ -69,11 +70,19 @@
           > 爱回收用户平台研发部 - 张振
          </textarea>
       </section>
+      <section data-markdown>
+        <textarea data-template>
+          - ### 核心目标
+          - ### 主要成果
+          - ### 复盘反思
+          - ### 下阶段工作计划
+         </textarea>
+      </section>
       <section>
         <section>
           <table>
             <caption style="margin-bottom: 1em;">
-              <h2>上半年业务需求</h2>
+              <h1>上半年业务需求</h1>
             </caption>
             <thead>
               <tr>
@@ -170,12 +179,14 @@
             - 背景
             - 措施
               - 用户隐私信息(经纬度、搜索历史、设备信息)不上传服务器
+              - 及时更新 《隐私政策》/《用户协议》
               - 个人信息双清单
-              - 浏览模式：不同意隐私政策/用户协议时 可以使用浏览模式
+              - 浏览模式：不同意《隐私政策》/《用户协议》时 可以使用浏览模式
               - 敏感接口增强签名规则
 
             Note:
-
+            2021-12-9号，我们的官网APP被工信部全网下架。
+            安卓端 日均新增用户 3000 左右, 占整个官网新增用户比例 30%。
           </textarea>
         </section>
         <section data-auto-animate data-auto-animate-id="luxury" data-markdown>
@@ -247,8 +258,8 @@
             > <strong>[活动]春节不打烊抽奖活动</strong>
 
             - 参与抽奖活动用户<span class="notes">(对比未参与抽奖用户)</span>
-              - 【  3C 】访问->提交 提升 <strong>33.3%</strong>
-              - 【奢侈品】访问->提交 提升 <strong>635.9%</strong>
+              - 【  3C 】访问->提交 📈️ <strong>33.3%</strong>
+              - 【奢侈品】访问->提交 📈️ <strong>635.9%</strong>
             <br />
             <br />
             - 6・18 期间有 <strong>15</strong> 个活动规则页面要快速上线并支持<strong>灵活修改</strong>
@@ -265,7 +276,7 @@
           - 已完成
             - 下线 .net 接口
             - 废弃过期项目
-            - 其他：发布工具、NPM 私仓、TS 重构
+            - 其他：项目脚手架、发布工具(Jenkins)、NPM 私仓、Sentry，TS 重构
           - 推进前端开发工具落地
           - 整理团队内部编码规范、最佳实践
           - 代码格式校验规则集
@@ -277,7 +288,7 @@
       <section>
         <table>
           <caption style="margin-bottom: 1em;">
-            <h2>主要成果</h2>
+            <h1>主要成果</h1>
           </caption>
           <thead>
             <tr>
@@ -317,7 +328,7 @@
                       <li>
                         大区管理系统：<br />
                         首次编译速度：📈️ <strong>28%</strong>；二次编译：📈️  <strong>90%</strong>;<br />
-                        打包体积:📈️  <strong>70%</strong>;
+                        打包体积:📉️  <strong>70%</strong>;
                       </li>
                       <li>
                         基于 React 框架的前端编码规范文档
@@ -366,7 +377,7 @@
           ## 复盘反思
           - #### C 端 UI 与 交互质量进一步提升
           - #### 前端编码规范
-            - 爱回收用户平台研发部 <=> 技术中心
+            - 爱回收用户平台研发部 <-> 技术中心
           - #### 优化跨公司级别需求的推进节奏
             - 奢侈品、爱分类
          </textarea>
@@ -386,7 +397,7 @@
       </section>
       <section data-markdown>
         <textarea data-template>
-          ### Thank you for listening.
+          ### Thank you for listening 🙂️.
 
           # Q &amp; A
          </textarea>
