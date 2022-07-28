@@ -49,7 +49,7 @@
 
     strong {
       font-size: 1.2em;
-      color: #ffe02d;
+      color: #0096FF;
     }
 
     .notes {
@@ -78,10 +78,8 @@
             <thead>
               <tr>
                 <th>
-                  <em>重点需求</em>
                 </th>
                 <th>
-                  其他
                 </th>
               </tr>
             </thead>
@@ -260,96 +258,116 @@
         </section>
       </section>
       </section>
-      <section>
-        <section data-markdown>
-          <textarea data-template>
-          ## 前端编码规范
-         </textarea>
-        </section>
-        <section data-markdown>
-          <textarea data-template>
-          ### 已完成的整理、重构：
-
-          ### 1. 下线 .net 接口
-          - portal-user
-          - portal-api
-          - portal-sos
-          - portal-wx
-         </textarea>
-        </section>
-        <section data-markdown>
-          <textarea data-template>
-          ### 已完成的整理、重构：
-
-          ### 2. 废弃过期项目
-          1. Huishou.Web.Mobile ( 合并 neom )
-          2. vue 版官网 ( 合并 neom )
-          3. vue 版活动页 m-ahs-activity ( 合并 neom )
-          4. sos ( 阿凡达 )
-          5. mpvue 微信小程序 earth ( Jupiter )
-          6. mpvue 头条小程序 saturn ( Jupiter )
-          7. weixin.aihuishou.com (下线)
-         </textarea>
-        </section>
-        <section data-markdown>
-          <textarea data-template>
-            ### 已完成的整理、重构：
-
-            ### 3. 其他
-            - 统一项目脚手架
-              - react-scripts-ahs
-            - 统一前端发布流程与工具(Jenkins)
-            - 搭建 NPM 私仓 (nexus)
-            - TS 重构
-            - 移除前端反向代理、为迁云做好准备
-              - dubai-gateway
-              - erp-gateway(部分完成)
-         </textarea>
-        </section>
-        <section data-markdown>
-          <textarea data-template>
-          ## 上半年技术目标：前端编码规范
-
-          - 整理团队内部编码规范、最佳实践
-          - 代码格式校验规则集
-         </textarea>
-        </section>
-      </section>
       <section data-markdown>
         <textarea data-template>
-          ## 主要成果
+          ## 上半年技术目标：前端开发工具、编码规范
+          - 背景
+          - 已完成
+            - 下线 .net 接口
+            - 废弃过期项目
+            - 其他：发布工具、NPM 私仓、TS 重构
+          - 推进前端开发工具落地
+          - 整理团队内部编码规范、最佳实践
+          - 代码格式校验规则集
 
-          - ### 重点业务需求稳定推进上线
-          - ### 前端编码规范
-            - 基于 React 框架的前端编码规范文档
-            - eslint-config-ahs
-          - ### 抽象业务逻辑 提升复用性、代码质量
-            - 询价
-            - 阿凡达富文本组件 H5 渲染器
-          - ### 身份转变<span class="notes">(角色增加)</span>
-
+          Notes:
+          之前，我们的前端团队只负责官网，今年上半年我们需要负责BD和中后台前端。
+        </textarea>
+      </section>
+      <section>
+        <table>
+          <caption style="margin-bottom: 1em;">
+            <h2>主要成果</h2>
+          </caption>
+          <thead>
+            <tr>
+              <th>
+              </th>
+              <th>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="vertial-align:top;" valign="top">
+                <div>
+                  <ul>
+                    <li>
+                      重点业务需求稳定推进上线
+                    </li>
+                    <li>
+                      协调人
+                      <ul>
+                        <li>
+                          确保各端实现方案的一致性
+                        </li>
+                        <li>
+                          明确各端边界（原生APP，H5，RN）
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+              <td style="vertial-align:top;" valign="top">
+                <ul>
+                  <li>
+                    前端开发工具、编码规范
+                    <ul>
+                      <li>
+                        大区管理系统：<br />
+                        首次编译速度：📈️ <strong>28%</strong>；二次编译：📈️  <strong>90%</strong>;<br />
+                        打包体积:📈️  <strong>70%</strong>;
+                      </li>
+                      <li>
+                        基于 React 框架的前端编码规范文档
+                      </li>
+                      <li>
+                        eslint-config-ahs
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    抽象业务逻辑 提升复用性、代码质量
+                    <ul>
+                      <li>
+                        询价
+                      </li>
+                      <li>
+                        阿凡达富文本组件 H5 渲染器
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <aside class="notes">
           Note:
           第三是 抽象业务逻辑：
           官网前端涉及五个端（iOS Android 微信小程序 头条小程序 原生H5），
           5 个技术栈（Android iOS RN 小程序 H5），
           同一个功能模块可能需要不同端分别实现 或者某一个功能需要在多个场景使用。
           比如 3C 询价逻辑，同时出现在旧机和换新流程中，旧机是原生页面，换新是 RN 实现的，我们把询价功能中与UI无关的部分抽象成为一个独立的 npm 包，给小程序/H5/RN 复用，实现关注点分离，把询价流程封装在包内部，各端关注接口请求和UI交互部分。
-
           最后是身份的转换
           我们在实践过程中发现各端在实现相同的功能时，对边界情况等细节的处理方式通常会有一些小小的不一致；
           还有一些需求需要各端实现一部分流程，然后整合起来形成一套完整的流程，比如换新和奢侈品（SPU列表页面的交互非常精细，需要在原生APP实现）。
           一个需求，从需求评审、移交、开发、联调 再到提测 需要有人协调整个需求生命周期中各端的想法、同步边界情况的处理方案，沟通一些交互的实现细节（比如轮询间隔；动画的模式、时间），对接跨端流程的跳转参数等问题 来确保每个需求点都按产品和设计师的期望推进。
           在过去的半年里，我逐渐承担了官网前端项目的这个角色。
-         </textarea>
+          </textarea>
       </section>
       <section data-markdown>
         <textarea data-template>
           ## 复盘反思
-          - ### C 端 UI 与 交互质量进一步提升
-
-          - #### 团队计划与公司整体策略契合
-            - 前端编码范
-          - #### 优化跨公司级别需求的推进方法
+          - #### C 端 UI 与 交互质量进一步提升
+          - #### 前端编码规范
+            - 爱回收用户平台研发部 <=> 技术中心
+          - #### 优化跨公司级别需求的推进节奏
             - 奢侈品、爱分类
          </textarea>
       </section>
@@ -357,9 +375,13 @@
         <textarea data-template>
           ## 下阶段工作计划
 
-          - ### 保障业务支持：确保重点业务需求如期稳定上线
-          - ### 精细化打磨 C 端 UI、交互细节
-          - ### 整合技术中心 前端工具链、编码规范、最佳实践
+          - #### 业务支持：确保重点业务需求稳定上线
+          - #### 技术能力
+            - 精细化打磨 C 端 UI、交互细节
+            - 技术中心 前端工具链、编码规范、最佳实践
+            - 业务抽象：继续推进
+          - #### 机制完善
+            - 人人都是协调人
          </textarea>
       </section>
       <section data-markdown>
